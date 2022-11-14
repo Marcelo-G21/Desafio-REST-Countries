@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #c4d2fc;
+    color: rgba(32, 45, 64, 0.8);
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    padding: 10px 40px;
+    display: flex;
+    gap:1.5rem;
+    
+}
+
+.row{
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+
+.card{
+    padding: 15px 15px 10px;
+    display: flex;
+    position: relative;
+}
+
+.card img {
+    display: block;
+    width: 300px;
+    height: 180px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body{
+    background-color: #e5eaf6;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.95);
+}
+
+.country-name{
+    width: 300px;
+}
