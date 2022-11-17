@@ -1,7 +1,6 @@
 import { routerFunction } from "./src/router/index.js";
 
 const url = "https://restcountries.com/v3.1/all";
-
 const content = document.getElementById("root");
 
 window.addEventListener("load", () => fetchData(url));
@@ -22,12 +21,43 @@ function printView(item) {
             <img src="${item.flags.png}" alt="" />
             <div class="card-description">
               <h2 class="country-name">${item.name.common}</h2>
-              <p class="country-region">${item.region}</p>
+              <p class="country-region"> Region: ${item.region}</p>
+              <p class="country-capital"> Capital: ${item.capital}</p>
+              <p class="country-population">Population: ${item.population}</p>
             </div>
           </div>
         </div>
     `;
 }
+
+
+//--------------Filtro de regiones-----------------
+
+const homeButton = document.querySelector('.homeSelect');
+  homeButton.addEventListener('click', () => fetchData(url));
+
+const buttonsFilters = document.querySelectorAll('.textSelect');
+
+const fetchByRegion = async (e) => {
+  const res = await fetch(`https://restcountries.com/v3.1/region/${e}`);
+  const data = await res.json();
+
+  return data
+};
+
+  const makeSearch = async(region) => {
+  const data = await fetchByRegion(region);
+  const templates = data.map((element) => printView(element));
+  content.innerHTML = templates.join('');
+}
+
+buttonsFilters.forEach((element) => {
+  element.addEventListener('click', (e) => makeSearch(e.target.textContent));
+});
+
+
+//--------------fin de filtor de regiones--------------
+
 
 const onLoadApp = () => {
   location.hash = "_home";
