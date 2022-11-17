@@ -15,23 +15,75 @@ body{
     justify-content: center;
 }
 
+/* -----------Search Bar--------- */
+
+.searchContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
+
+.searchBar{
+    width: 100%;
+    max-width: 700px;
+    background: rgba(134, 155, 217, 0.629);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.searchBar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 15px 10px;
+    font-size: large;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+.searchBar button img{
+    width: 25px;
+}
+
+.searchBar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #869bd9;
+    cursor: pointer;
+}
+
+.dropdownContainer{
+    display: none;
+}
+
+/* -----------Filter Menu----------- */
 
 .menu{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: #869bd9;
 }
 
 .textSelect, .homeSelect {
     background-color: #869bd9;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  transition: 0.3s;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 100%;
 }
 
 .textSelect:hover, .homeSelect:hover {
@@ -39,8 +91,9 @@ body{
 }
 
 
+/* -----------Cards------------ */
 .container{
-    padding: 10px 40px;
+    padding: 10px 20px;
     display: flex;
     gap:1.5rem;
     
@@ -77,34 +130,169 @@ body{
     box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.95);
 }
 
-.country-name{
+.card-description{
     width: 300px;
 }
 
-@media (max-width: 800px){
-    .card{
+/* ----------Responsive Tablet------------ */
+
+@media screen and (max-width: 1160px){
+
+    /* ---------Search Bar-------- */
+
+    .searchBar{
+        width: 500%;
+        height: 40px;
+        max-width: 500px;
         display: flex;
-        width: 210px;
+    }
+
+    .searchBar input{
+        font-size: medium;
+    }
+    .searchBar button img{
+        width: 20px;
+    }
+
+    .searchBar button{
+        width: 40px;
+        height: 40px;
     }
     
+
+    /* ---------FIlter Menu------- */
+    
+    .textSelect, .homeSelect {
+      padding: 15px 32px;
+      text-align: center;
+      display: inline-block;
+      font-size: medium;
+      transition: 0.3s;
+    }
+    
+    .textSelect:hover, .homeSelect:hover {
+        background-color: #4b63ab;
+    }
+
+
+    /* ---------Cards--------- */
+    
     .card img {
-        display: block;
-        width: 210px;
-        height: 126px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        width: 150px;
+        height: 90px;
     }
 
     .card-body{
-
-        background-color: #e5eaf6;
-        text-align: center;
-        border-radius: 15px;
-        box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.95);
-    
+        font-size: small;
     }
 
     .card-description {
-        width: 210px;
+        width: 150px;
     }
+    .country-name{
+        font-size: medium;
+        width: 150px;
+    }
+
+}
+
+/* -------------Responsive phone------------ */
+
+@media screen and (max-width: 632px){
+
+ /* ---------Search Bar-------- */
+
+    .searchContainer{
+      justify-content: space-evenly;
+    }
+
+    .searchBar{
+        width: 60%;
+        height: 40px;
+        max-width: 500px;
+        display: flex;
+    }
+
+    .searchBar input{
+        font-size: small;
+    }
+
+    .searchBar button img{
+        width: 15px;
+    }
+
+    .searchBar button{
+        width: 30px;
+        height: 30px;
+    }
+
+    /* -------Filter Menu---------- */
+
+    .appSelect{
+        display: none;
+    }
+
+    .appSelect.active{
+        display: flex;
+    }
+
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .textSelect, .homeSelect {
+        padding: 5px 10px;
+        width: 100%;
+    }
+
+    .dropdownContainer{
+        display: flex;
+    }
+
+    .dropdownContainer button img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .dropdownContainer button {
+        border: 0;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    
+    
+    /* ---------Cards--------- */
+    
+    .container{
+        padding: 10px 10px;
+    }
+    .card{
+        padding: 8px 8px 6px;
+    }
+    .card img {
+        width: 120px;
+        height: 72px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .card-body{
+        font-size: 10px;
+        border-radius: 10px;
+    }
+
+    .card-description {
+        width: 120px;
+    }
+    .country-name{
+        font-size: small;
+        width: 120px;
+    }
+
 }

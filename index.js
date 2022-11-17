@@ -56,7 +56,14 @@ buttonsFilters.forEach((element) => {
 });
 
 
-//--------------fin de filtor de regiones--------------
+const dropdownButton = document.getElementsByClassName('dropdownContainer')[0]
+const filterLinks = document.getElementsByClassName('appSelect')[0]
+
+dropdownButton.addEventListener('click', () => {
+  filterLinks.classList.toggle('active');
+});
+
+//--------------fin de filtro de regiones--------------
 
 
 const onLoadApp = () => {
