@@ -1,4 +1,4 @@
-import { routerFunction } from "./src/router/index.js";
+import { routerFunction } from "../src/router/index.js";
 
 const url = "https://restcountries.com/v3.1/all";
 const content = document.getElementById("root");
@@ -8,22 +8,23 @@ window.addEventListener("load", () => fetchData(url));
 async function fetchData(url) {
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
 
   const view = data.map((item) => printView(item));
   content.innerHTML = view.join('');
 }
 
+//---------All Countries---------
+
 function printView(item) {
   return `
     <div class="card">
           <div class="card-body">
-            <img src="${item.flags.png}" alt="" />
+          <a href="country.html?name=${item.name.common}"><img src="${item.flags.png}" alt="" /></a>
             <div class="card-description">
-              <h2 class="country-name">${item.name.common}</h2>
-              <p class="country-region"> Region: ${item.region}</p>
-              <p class="country-capital"> Capital: ${item.capital}</p>
-              <p class="country-population">Population: ${item.population}</p>
+              <h2>${item.name.common}</h2>
+              <p> Region: ${item.region}</p>
+              <p> Capital: ${item.capital}</p>
+              <p >Population: ${item.population}</p>
             </div>
           </div>
         </div>
@@ -63,7 +64,10 @@ dropdownButton.addEventListener('click', () => {
   filterLinks.classList.toggle('active');
 });
 
-//--------------fin de filtro de regiones--------------
+
+
+
+//--------------Hashs--------------
 
 
 const onLoadApp = () => {

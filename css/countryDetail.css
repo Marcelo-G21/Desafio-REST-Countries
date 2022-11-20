@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #c4d2fc;
+    color: rgba(32, 45, 64, 0.8);
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+
+.back-btn{
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    display: grid;
+    width: 100px;
+    height: 50px;
+    background: #869bd9;
+    place-items: center;
+    border-radius: 15px;
+}
+
+/* -----------Cards------------ */
+.container{
+    padding: 10px 20px;
+    display: flex;
+    gap:1.5rem;
+    
+}
+
+.row{
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+
+.card{
+    padding: 15px 15px 10px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.card img {
+    display: block;
+    width: 600px;
+    height: 360px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body{
+    background-color: #e5eaf6;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.95);
+}
+
+.card-body a {
+    cursor: pointer;
+}
+
+.card-description{
+    width: 600px;
+}
+
+/* ----------Responsive Tablet------------ */
+
+@media screen and (max-width: 1160px){
+
+
+    /* ---------Cards--------- */
+    
+    .card img {
+        width: 450px;
+        height: 270px;
+    }
+
+    .card-body{
+        font-size: small;
+    }
+
+    .card-description {
+        width: 450px;
+    }
+    .country-name{
+        font-size: medium;
+        width: 450px;
+    }
+
+}
+
+/* -------------Responsive phone------------ */
+
+@media screen and (max-width: 632px){
+
+    
+    /* ---------Cards--------- */
+    
+    .container{
+        padding: 10px 10px;
+    }
+    .card{
+        padding: 8px 8px 6px;
+    }
+    .card img {
+        width: 300px;
+        height: 180px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .card-body{
+        font-size: 10px;
+        border-radius: 10px;
+    }
+
+    .card-description {
+        width: 300px;
+    }
+    .country-name{
+        font-size: small;
+        width: 300px;
+    }
+
+}

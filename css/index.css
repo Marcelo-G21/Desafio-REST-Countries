@@ -61,6 +61,10 @@ body{
     cursor: pointer;
 }
 
+.searchBar button:hover{
+    background: #4b63ab;
+}
+
 .dropdownContainer{
     display: none;
 }
@@ -130,8 +134,8 @@ body{
     box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.95);
 }
 
-.card-description{
-    width: 300px;
+.card-body a {
+    cursor: pointer;
 }
 
 /* ----------Responsive Tablet------------ */
@@ -215,6 +219,7 @@ body{
 
     .searchBar input{
         font-size: small;
+        width: 20px;
     }
 
     .searchBar button img{
