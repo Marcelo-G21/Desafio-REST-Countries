@@ -58,11 +58,6 @@ body{
     width: 60px;
     height: 60px;
     background: #869bd9;
-    cursor: pointer;
-}
-
-.searchBar button:hover{
-    background: #4b63ab;
 }
 
 .dropdownContainer{

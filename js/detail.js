@@ -15,7 +15,6 @@ const fetchData = async () => {
       
         const filterData = data.filter(item => item.name.common === params);
       
-        console.log(filterData)
         countryDetail(filterData);
     }catch (error){
         console.log(error);
