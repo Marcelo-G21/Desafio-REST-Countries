@@ -133,6 +133,10 @@ body{
     cursor: pointer;
 }
 
+.card-description{
+    width: 300px;
+}
+
 /* ----------Responsive Tablet------------ */
 
 @media screen and (max-width: 1160px){
