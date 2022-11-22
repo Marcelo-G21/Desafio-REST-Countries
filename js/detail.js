@@ -4,7 +4,7 @@ const query = new URLSearchParams(window.location.search);
 const params = query.get('name');
 const url = "https://restcountries.com/v3.1/all";
 
-document.addEventListener("DOMContentLoaded", e => {
+document.addEventListener("DOMContentLoaded", () => {
     fetchData();
 });
 
@@ -25,10 +25,6 @@ const fetchData = async () => {
 const countryDetail = data => {
     let elements = ''
 
-    function isObj(obj){
-        return Object.prototype.toString.call(obj) === '[object Object]';
-    }
-
     function getValues(obj){
         if (obj === undefined){
             return 'Undefined'
@@ -48,7 +44,7 @@ const countryDetail = data => {
               <h2>${item.name.common}</h2>
               <p>Official name: ${item.name.official}</p>
               <p>Region: ${item.region}</p>
-              <p>Capital: ${item.capital}</p>
+              <p>Capital: ${getValues(item.capital)}</p>
               <p>Languages: ${getValues(item.languages)}</p>
               <p>Population: ${item.population}</p>
               <p>Time Zone: ${getValues(item.timezones)}</p>

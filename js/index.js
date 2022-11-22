@@ -1,6 +1,6 @@
 const url = "https://restcountries.com/v3.1/all";
 
-document.addEventListener("DOMContentLoaded", (e) => {
+document.addEventListener("DOMContentLoaded", () => {
   fetchData();
 });
 
