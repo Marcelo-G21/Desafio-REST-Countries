@@ -43,7 +43,8 @@ const countryDetail = data => {
         elements += `
         <div class="card">
           <div class="card-body">
-          <img src="${item.flags.png}" alt="" />
+          <img class="flag" src="${item.flags.png}" alt="" />
+          <img class="coat-of-arms" src="${item.coatOfArms.png}" alt="" />
             <div class="card-description">
               <h2>${item.name.common}</h2>
               <p>Official name: ${item.name.official}</p>

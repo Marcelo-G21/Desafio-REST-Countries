@@ -32,35 +32,36 @@ body{
     padding: 10px 20px;
     display: flex;
     gap:1.5rem;
-    
-}
-
-.row{
-    margin: auto;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-items: center;
-    justify-content: center;
 }
 
 .card{
     padding: 15px 15px 10px;
     display: flex;
-    position: relative;
     justify-content: center;
 }
 
-.card img {
-    display: block;
-    width: 600px;
-    height: 360px;
+.flag {
+    padding: 100px 50px;
+    display: flex;
+    width: 300px;
+    height: 180px;
     border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    
+}
+
+.coat-of-arms{
+    display: flex;
+    padding: 130px;
+    padding-left: 10px;
+    padding-right: 0px;
+    width: auto;
+    height: auto;
+    max-width: 120px;
 }
 
 .card-body{
+    display: flex;
     background-color: #e5eaf6;
     text-align: center;
     border-radius: 15px;
@@ -72,7 +73,7 @@ body{
 }
 
 .card-description{
-    width: 600px;
+    width: 340px;
 }
 
 /* ----------Responsive Tablet------------ */
@@ -82,9 +83,16 @@ body{
 
     /* ---------Cards--------- */
     
-    .card img {
-        width: 450px;
-        height: 270px;
+    .flag{
+        padding: 100px 20px ;
+        width: 210px;
+        height: 126px;
+    }
+
+    .coat-of-arms{
+        display: flex;
+        padding: 110px 10px;
+        max-width: 100px;
     }
 
     .card-body{
@@ -92,7 +100,7 @@ body{
     }
 
     .card-description {
-        width: 450px;
+        width: 220px;
     }
     .country-name{
         font-size: medium;
@@ -109,16 +117,64 @@ body{
     /* ---------Cards--------- */
     
     .container{
+        padding: 10px 20px;
+        display: flex;
+        gap:1.5rem;
+        
+    }
+    
+    .card{
+        padding: 15px 15px 10px;
+    }
+    
+    .flag {
+        padding: 10px 40px;
+        width: 150px;
+        height: 90px;
+        margin: 0 auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    .coat-of-arms{
+        padding: 0px;
+        padding-top: 5px;
+        max-height: 70px;
+        margin: 0 auto;
+    }
+
+    .card-body{
+        width: 90%;
+        display: block;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+
+    .card-description{
+        width: 120px;
+        margin: 0 auto;
+    }
+    
+
+
+    /* .container{
         padding: 10px 10px;
     }
     .card{
+        display: block;
         padding: 8px 8px 6px;
     }
-    .card img {
+    .flag {
+        display: block;
         width: 300px;
         height: 180px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+    }
+    .coat-of-arms{
+        display: block;
+        padding: 110px 10px;
+        max-width: 100px;
     }
 
     .card-body{
@@ -133,5 +189,5 @@ body{
         font-size: small;
         width: 300px;
     }
-
+ */
 }
