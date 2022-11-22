@@ -1,7 +1,4 @@
-import { routerFunction } from "../src/router/index.js";
-
 const url = "https://restcountries.com/v3.1/all";
-const content = document.getElementById("root");
 
 document.addEventListener("DOMContentLoaded", (e) => {
   fetchData();
@@ -87,14 +84,3 @@ const clientForm = (data) => {
   });
 };
 
-//--------------Hashs--------------
-
-const onLoadApp = () => {
-  location.hash = "_home";
-};
-
-//On load app function
-window.addEventListener("load", () => onLoadApp());
-
-//Listener hash changer
-window.addEventListener("hashchange", () => routerFunction(location.hash));
